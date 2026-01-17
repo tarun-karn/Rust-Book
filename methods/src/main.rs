@@ -7,6 +7,9 @@ impl Rectangle{
     fn calculate_area(&self) -> u32 {
         self.width * self.height
     }
+    fn can_hold(&self,other:&Rectangle) -> bool{
+        self.width <=other.width && self.height <= other.height
+    }
 }
 
 fn main() {
@@ -20,4 +23,5 @@ fn main() {
     };
     println!("The area of rect 1 is {}",rect1.calculate_area());
     println!("The area of rect 2 is {}",rect2.calculate_area());
+    println!("Can rect1 hold rect2 {}",rect1.can_hold(&rect2));
 }
