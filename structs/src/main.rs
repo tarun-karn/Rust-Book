@@ -6,9 +6,9 @@ struct Rectangle{
 fn main (){
     let rect = Rectangle{width:32,height:43};
 
-    let area = calculate_area(rect);
+    let area = calculate_area(&rect);
     println!("Area of rectangle is {area}");
 }
-fn calculate_area(rect : Rectangle) -> u32 {
+fn calculate_area(rect : &Rectangle) -> u32 {
     rect.width * rect.height
 }
